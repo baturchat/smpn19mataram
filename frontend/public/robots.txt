@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://smpn19mataram.vercel.app/sitemap.xml
