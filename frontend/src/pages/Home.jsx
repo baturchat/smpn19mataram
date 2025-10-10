@@ -43,7 +43,7 @@ const Home = () => {
   const galleryImages = [
     { id: 1, title: 'Upacara Bendera', image: '/images/upacara-bendera.jpg' },
     { id: 2, title: 'Ekstrakurikuler Futsal', image: '/images/futsal-smp19.jpg' },
-    { id: 3, title: 'Literasi Al-Qur'an', image: '/images/literasi.jpg' },
+    { id: 3, title: 'Literasi Al-Quran', image: '/images/literasi.jpg' },
     { id: 4, title: 'Pemilihan Ketua Osis 2024/2025', image: '/images/vooting-day.jpg' },
   ];
 
