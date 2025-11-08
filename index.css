@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark transition-colors duration-500;
+  @apply bg-primary-light dark:bg-primary-dark text-secondary-light dark:text-secondary-dark transition-colors duration-500;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
 }
@@ -21,23 +21,33 @@ body {
 }
 
 .glass-card {
-  @apply bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   transition: background-color 0.5s, border-color 0.5s;
 }
 
+.dark .glass-card {
+  background: rgba(10, 25, 47, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
 .btn-glow {
-  @apply shadow-accent-glow-light dark:shadow-accent-glow-dark;
+  box-shadow: 0 0 25px rgba(14, 165, 233, 0.4);
   transition: all 0.3s ease-in-out;
 }
 
+.dark .btn-glow {
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.3);
+}
+
 .btn-glow:hover {
-   box-shadow: 0 0 10px theme('colors.accent.light'), 0 0 25px theme('colors.accent.light'), 0 0 50px theme('colors.accent.light');
+   box-shadow: 0 0 10px #0EA5E9, 0 0 25px #0EA5E9, 0 0 50px #0EA5E9;
 }
 
 .dark .btn-glow:hover {
-   box-shadow: 0 0 10px theme('colors.accent.dark'), 0 0 25px theme('colors.accent.dark'), 0 0 50px theme('colors.accent.dark');
+   box-shadow: 0 0 10px #38BDF8, 0 0 25px #38BDF8, 0 0 50px #38BDF8;
 }
 
 .scroll-reveal {
@@ -62,23 +72,25 @@ body {
  
 .contact-input {
   background-color: rgba(15, 23, 42, 0.05);
-  @apply border border-border-light dark:border-border-dark;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease-in-out;
 }
 
 .dark .contact-input {
    background-color: rgba(241, 245, 249, 0.05);
+   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .contact-input:focus {
-  @apply border-accent-light dark:border-accent-dark;
+  border-color: #0EA5E9;
   background-color: rgba(15, 23, 42, 0.02);
-  box-shadow: 0 0 10px theme('colors.accent.light / 50%');
+  box-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
 }
 
 .dark .contact-input:focus {
+  border-color: #38BDF8;
   background-color: rgba(241, 245, 249, 0.05);
-  box-shadow: 0 0 10px theme('colors.accent.dark / 50%');
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
 }
 
 .gradient-text {
@@ -87,7 +99,7 @@ body {
 
 .dark .gradient-text {
   @apply from-white to-sky-400;
-  text-shadow: 0 0 15px theme('colors.accent.dark / 50%');
+  text-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
 }
 
 .btn-gradient {
