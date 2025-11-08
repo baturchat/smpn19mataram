@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-background-light dark:bg-background-dark text-foreground-light dark:text-foreground-dark transition-colors duration-500;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+#aurora-background {
+  background: radial-gradient(ellipse at top, #e0f2fe 0%, #f0f4f9 50%),
+              radial-gradient(ellipse at bottom, #dbeafe 0%, #f0f4f9 50%);
+  background-size: 200% 200%;
+  animation: aurora 60s infinite linear;
+}
+
+.dark #aurora-background {
+  background: radial-gradient(ellipse at top, #0c4a6e 0%, #020418 50%),
+              radial-gradient(ellipse at bottom, #075985 0%, #020418 50%);
+}
+
+.glass-card {
+  @apply bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  transition: background-color 0.5s, border-color 0.5s;
+}
+
+.btn-glow {
+  @apply shadow-accent-glow-light dark:shadow-accent-glow-dark;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-glow:hover {
+   box-shadow: 0 0 10px theme('colors.accent.light'), 0 0 25px theme('colors.accent.light'), 0 0 50px theme('colors.accent.light');
+}
+
+.dark .btn-glow:hover {
+   box-shadow: 0 0 10px theme('colors.accent.dark'), 0 0 25px theme('colors.accent.dark'), 0 0 50px theme('colors.accent.dark');
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-item {
+  opacity: 0;
+  transition: opacity 0.8s ease-out 0.2s, transform 0.8s ease-out 0.2s;
+}
+
+.timeline-item.timeline-left { transform: translateX(-50px); }
+.timeline-item.timeline-right { transform: translateX(50px); }
+.timeline-item.visible { opacity: 1; transform: translateX(0); }
+ 
+.contact-input {
+  background-color: rgba(15, 23, 42, 0.05);
+  @apply border border-border-light dark:border-border-dark;
+  transition: all 0.3s ease-in-out;
+}
+
+.dark .contact-input {
+   background-color: rgba(241, 245, 249, 0.05);
+}
+
+.contact-input:focus {
+  @apply border-accent-light dark:border-accent-dark;
+  background-color: rgba(15, 23, 42, 0.02);
+  box-shadow: 0 0 10px theme('colors.accent.light / 50%');
+}
+
+.dark .contact-input:focus {
+  background-color: rgba(241, 245, 249, 0.05);
+  box-shadow: 0 0 10px theme('colors.accent.dark / 50%');
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-br from-sky-600 to-cyan-500;
+}
+
+.dark .gradient-text {
+  @apply from-white to-sky-400;
+  text-shadow: 0 0 15px theme('colors.accent.dark / 50%');
+}
+
+.btn-gradient {
+  @apply bg-gradient-to-r from-sky-600 to-cyan-500 text-white;
+}
+
+.dark .btn-gradient {
+  @apply bg-gradient-to-r from-sky-400 to-cyan-300 text-slate-900;
+}

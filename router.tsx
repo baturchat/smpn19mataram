@@ -1,5 +1,5 @@
 import React from 'react';
-import { createHashRouter, Outlet, ScrollRestoration } from 'react-router-dom';
+import { createBrowserRouter, Outlet, ScrollRestoration } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
@@ -43,7 +43,7 @@ const Layout = () => {
 };
 
 
-export const router = createHashRouter([
+export const router = createBrowserRouter([
   {
     path: '/',
     element: <Layout />,
