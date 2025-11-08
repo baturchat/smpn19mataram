@@ -18,7 +18,7 @@ Sejarah Singkat: Didirikan tahun 1983, menjadi sekolah mandiri tahun 1985, merai
 AI Asisten: Sira.
 `;
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_API_KEY! });
 
 // Function to get the full context asynchronously
 async function getFullContext() {
