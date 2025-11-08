@@ -121,3 +121,6 @@ This section showcases a multi-step AI workflow:
     -   Implement Gemini's function calling for more interactive tasks (e.g., booking an appointment with a teacher).
     -   Use multimodal input (image uploads) for Sira to answer questions about pictures.
     -   Expand the E-Learning portal with AI-powered tutoring or assignment grading assistance.
+ 
+## Copyright
+ **Ibra Decode**
