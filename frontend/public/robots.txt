@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://www.smpn19mtr.web.id/sitemap.xml
